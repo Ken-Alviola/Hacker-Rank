@@ -62,4 +62,12 @@ from station;
 
 /*Weather Observation Station 13
 Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than 38.788 and less than 137.2345 . 
-Truncate your answer to 4 decimal places.
+Truncate your answer to 4 decimal places. */
+
+select round(sum(lat_n),4)
+from station
+where lat_n > 38.788 and lat_n < 137.2345;
+
+/* Weather Observation Station 14
+Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345. 
+Truncate your answer to 4 decimal places. */
