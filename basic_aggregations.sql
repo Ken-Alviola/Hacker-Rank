@@ -114,3 +114,13 @@ Query the Manhattan Distance between points p1 and p2 and round it to a scale of
 The distance between two points measured along axes at right angles. 
 In a plane with p1 at (x1, y1) and p2 at (x2, y2), it is |x1 - x2| + |y1 - y2|. 
 |a - c| + |b -d| */
+
+select abs(round(min(lat_n)-max(lat_n),4)) 
+    + abs(round(min(long_w)-max(long_w),4))
+from station;
+
+/*Weather Observation Station 19
+Consider p1(a,c) and p2(b,d) to be two points on a 2D plane where (a,b) are the respective minimum and maximum values of Northern Latitude (LAT_N) 
+and (c,d) are the respective minimum and maximum values of Western Longitude (LONG_W) in STATION.
+Query the Euclidean Distance between points  and  and format your answer to display  decimal digits. */
+sqrt((b-a)^2 +(d-c)^2)
