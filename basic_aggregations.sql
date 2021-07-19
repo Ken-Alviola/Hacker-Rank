@@ -124,3 +124,12 @@ Consider p1(a,c) and p2(b,d) to be two points on a 2D plane where (a,b) are the 
 and (c,d) are the respective minimum and maximum values of Western Longitude (LONG_W) in STATION.
 Query the Euclidean Distance between points  and  and format your answer to display  decimal digits. */
 sqrt((b-a)^2 +(d-c)^2)
+
+select round(sqrt((power(max(lat_n)-min(lat_n),2))+(power(max(long_w)-min(long_w),2))) ,4)
+from station;
+
+/*Weather Observation Station 20
+ median is defined as a number separating the higher half of a data set from the lower half. 
+ Query the median of the Northern Latitudes (LAT_N) from STATION and round your answer to  4 decimal places. */
+
+ 
