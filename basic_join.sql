@@ -40,6 +40,27 @@ SELECT CASE
         END
 FROM TRIANGLES;
 
+/* Draw The Triangle 1
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+* * * * * 
+* * * * 
+* * * 
+* * 
+*
+Write a query to print the pattern P(20).*/
+set @number = 21;
+select repeat('* ', @number := @number - 1) from information_schema.tables;
+
+/*Draw The Triangle 2
+P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+Write a query to print the pattern P(20). */
+
+
 
 /*The Report
 You are given two tables: Students and Grades. Students contains three columns ID, Name and Marks.
