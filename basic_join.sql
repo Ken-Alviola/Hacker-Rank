@@ -59,7 +59,14 @@ P(R) represents a pattern drawn by Julia in R rows. The following pattern repres
 * * * * 
 * * * * *
 Write a query to print the pattern P(20). */
+set @number = 0;
+select repeat('* ', @number := @number + 1) from information_schema.tables
+limit 20;
 
+/*Print Prime Numbers
+Write a query to print all prime numbers less than or equal to . Print your result on a single line, and use the ampersand () character as your separator (instead of a space).
+For example, the output for all prime numbers  would be:
+2&3&5&7 */
 
 
 /*The Report
